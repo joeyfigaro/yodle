@@ -78,7 +78,7 @@ MongoDriver.getProjectEntries = function(project, searchOptions, query) {
     users: searchOptions.user
   };
   for(var i in query) {
-    search['entries.' + i] = query[i];
+    search[i] = query[i];
   }
 
   return new Promise((_resolve, _reject) => {
